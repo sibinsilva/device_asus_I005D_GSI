@@ -33,7 +33,10 @@ Unlike generic GSIs that must accommodate hundreds of OEM devices, this build ta
 
 ## 3. Device Tree Structure
 
-The device tree is located at [`device/asus/I005D`](file:///data/build/device/asus/I005D):
+The device tree is located at [`device/asus/I005D`](file:///data/build/device/asus/I005D) and is versioned in
+[`sibinsilva/device_asus_I005D_GSI`](https://github.com/sibinsilva/device_asus_I005D_GSI) (`android-16.0`).
+It is synced by `manifests/treble.xml` and reset to a clean state by `scripts/setup_tree.sh`, so every change
+must be committed and pushed there before building.
 
 ```text
 device/asus/I005D/
@@ -57,6 +60,15 @@ device/asus/I005D/
 
 ## 4. Build Instructions
 
+### Automated (recommended)
+```bash
+/data/gsi-build-solution/scripts/build_rog5.sh /data/build userdebug /data/release
+```
+This syncs the tree, applies patches, verifies the source, runs `m installclean` + `m systemimage`,
+verifies the image with `verify_gsi.sh --rog5`, and writes `ROG5_I005D-stockvendor-GAPPS-<variant>-<date>.img(.xz)`
+plus SHA-256 files to the release directory.
+
+### Manual
 ### Step 1: Environment Setup
 ```bash
 cd /data/build
@@ -70,6 +82,7 @@ lunch lunaris_I005D-bp4a-userdebug
 
 ### Step 3: Compile System Image
 ```bash
+m installclean
 m systemimage -j$(nproc)
 ```
 
@@ -86,7 +99,10 @@ Before releasing or flashing, verify the output image using the unprivileged `de
 
 ```bash
 # Verify the built image against all required VNDK, SELinux, and binary rules
-/data/gsi-build-solution/scripts/verify_gsi.sh --image /data/build out/target/product/I005D/system.img
+/data/gsi-build-solution/scripts/verify_gsi.sh --rog5 /data/build /data/build/out/target/product/I005D/system.img
+
+# Note: Android 16 Soong writes ro.product.system.name from the device name (ASUS_I005_1),
+# so PRODUCT_SYSTEM_NAME (WW_I005D) does not appear there.
 
 # Inspect build properties inside the image
 /usr/sbin/debugfs -R "cat system/build.prop" out/target/product/I005D/system.img | grep -E "ro.product|ro.lunaris"
