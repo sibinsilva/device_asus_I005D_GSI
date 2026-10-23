@@ -1,0 +1,15 @@
+<manifest version="1.0" type="framework">
+    <!-- anakin (UDFPS) registers IBiometricsFingerprint 2.3; libhidl refuses to
+         register a HIDL service whose exact version isn't in a VINTF manifest.
+         2.3 also covers 2.2/2.1 lookups (minor-version compatibility), and
+         libvintf rejects listing the same major version twice. -->
+    <hal format="hidl">
+        <name>android.hardware.biometrics.fingerprint</name>
+        <transport>hwbinder</transport>
+        <version>2.3</version>
+        <interface>
+            <name>IBiometricsFingerprint</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</manifest>
