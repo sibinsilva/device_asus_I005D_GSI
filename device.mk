@@ -84,6 +84,7 @@ PRODUCT_COPY_FILES += \
     device/phh/treble/vndk.rc:system/etc/init/vndk.rc \
     device/phh/treble/charger.rc:system/etc/init/charger.rc \
     device/phh/treble/rog5-fixups.rc:system/etc/init/rog5-fixups.rc \
+    device/asus/I005D/keylayout/fts_ts.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/fts_ts.kl \
     device/phh/treble/files/wifi-apexdata.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/wifi-apexdata.rc \
     device/asus/I005D/files/rw-system.sh:system/bin/rw-system.sh \
     device/phh/treble/phh-on-boot.sh:system/bin/phh-on-boot.sh \
