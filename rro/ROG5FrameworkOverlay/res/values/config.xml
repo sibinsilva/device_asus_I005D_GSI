@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- GoogleConfigOverlay_GMS points the Wi-Fi shared connectivity (Instant
+         Hotspot) client at GMS "magictether", which only exists on Pixels:
+         GMS answers "Service without Chimera impl" and SharedConnectivityManager
+         rethrows it, crashing SystemUI. Empty values (the AOSP default) make
+         SharedConnectivityManager.create() return null. -->
+    <string name="config_sharedConnectivityServicePackage" translatable="false"></string>
+    <string name="config_sharedConnectivityServiceIntentAction" translatable="false"></string>
+</resources>

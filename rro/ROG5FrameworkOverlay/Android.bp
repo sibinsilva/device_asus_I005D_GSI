@@ -1,0 +1,8 @@
+// ROG Phone 5 framework overrides that must beat the GMS product RROs
+// (GoogleConfigOverlay_GMS is a static product RRO with priority 0), so
+// they can't live in the compile-time device/asus/I005D/overlay.
+
+runtime_resource_overlay {
+    name: "ROG5FrameworkOverlay",
+    product_specific: true,
+}
