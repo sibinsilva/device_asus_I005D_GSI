@@ -854,8 +854,10 @@ if [ ! -f /metadata/securize_disable ]; then
     copyprop ro.product.product.model ro.vendor.product.model
     copyprop ro.product.system.model ro.product.vendor.model
     copyprop ro.product.model ro.product.vendor.model
-    copyprop ro.build.product ro.vendor.product.model
-    copyprop ro.build.product ro.product.vendor.model
+    # ROG Phone 5: keep the stock ASUS project code. ASUS vendor components
+    # (the camx camera HAL exposes its logical/aux cameras like stock) key off
+    # ro.build.product=ZS673KS, not the model name.
+    resetprop_phh ro.build.product ZS673KS
     copyprop ro.product.system_ext.model ro.product.vendor.model
     copyprop ro.product.product.model ro.product.vendor.model
     copyprop ro.system.product.manufacturer ro.vendor.product.manufacturer

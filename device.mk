@@ -118,6 +118,7 @@ PRODUCT_PACKAGES += \
     Stk \
     resetprop_phh \
     android.hardware.biometrics.fingerprint@2.3-service.anakin \
+    AsusCamera \
     curl \
     NavigationBarMode2ButtonOverlay \
     evgrab \
