@@ -37,3 +37,24 @@ vendor.camera.cam3.eis.sup_list=FHD@30,HD@30
 vendor.camera.cam6.eis.sup_list=8K@30,4K@60,4K@30,FHD@60,FHD@30,HD@30
 vendor.camera.fovc=0:0;1:0;2:0;3:0;4:1;5:0;6:0
 vendor.camera.night=4:1;1:0;2:1;3:0;6:1
+
+# Vibration amplitude scaling, as on stock.
+ro.vendor.asus.scale_low_max_amp=84
+ro.vendor.asus.scale_none_max_amp=168
+
+# Volume steps and defaults, as on stock.
+ro.config.media_vol_steps=30
+ro.config.media_vol_default=15
+ro.config.vc_call_vol_default=3
+
+# ROG identity, AeroActive Cooler 5 generation and the stock fan defaults
+# (persist.vendor.asus.userfan / micfansettings start the vendor InboxUserFan
+# service from init.asus.rc).
+ro.asus.rog=1
+vendor.asus.accy_gen=5
+persist.vendor.asus.userfan=0
+persist.vendor.asus.micfansettings=1
+
+# Media, as on stock.
+media.stagefright.thumbnail.prefer_hw_codecs=true
+media.aac_51_output_enabled=true
