@@ -1,4 +1,9 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <resources>
     <bool name="config_turbulenceNoise">false</bool>
+
+    <!-- UDFPS: the panel goes to global HBM while the finger is down, so dim the rest of the
+         screen like the stock ASUS FOD masker, but only during illumination. -->
+    <bool name="config_udfpsFrameworkDimming">true</bool>
+    <bool name="config_udfpsDimOnlyWhileIlluminating">true</bool>
 </resources>

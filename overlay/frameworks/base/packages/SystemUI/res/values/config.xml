@@ -18,6 +18,10 @@
     <dimen name="qs_tile_text_size">12.859955dip</dimen>
     <dimen name="rounded_corner_content_padding">16.0dip</dimen>
 
+    <!-- Panel pixel pitch in um (6.78" 1080x2448, ~394.6 ppi). Sizes the UDFPS lock screen
+         icon; the AOSP placeholder -1 makes it render as a huge magnified block. -->
+    <item name="pixel_pitch" format="float" type="dimen">64.37</item>
+
     <!-- The font size for the clock in the status bar. -->
     <dimen name="status_bar_clock_size">15.809938dp</dimen>
 
