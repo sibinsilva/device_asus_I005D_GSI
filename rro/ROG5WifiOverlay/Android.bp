@@ -1,0 +1,7 @@
+// ROG Phone 5 Wi-Fi overrides. com.android.wifi.resources lives in the Wi-Fi
+// APEX, so the compile-time device/asus/I005D/overlay can't reach it.
+
+runtime_resource_overlay {
+    name: "ROG5WifiOverlay",
+    product_specific: true,
+}

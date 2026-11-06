@@ -120,6 +120,7 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.anakin \
     AsusCamera \
     ROG5FrameworkOverlay \
+    ROG5WifiOverlay \
     curl \
     NavigationBarMode2ButtonOverlay \
     evgrab \
