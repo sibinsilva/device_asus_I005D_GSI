@@ -87,6 +87,8 @@ PRODUCT_COPY_FILES += \
     device/asus/I005D/keylayout/fts_ts.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/fts_ts.kl \
     device/phh/treble/files/wifi-apexdata.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/wifi-apexdata.rc \
     device/asus/I005D/files/rw-system.sh:system/bin/rw-system.sh \
+    device/asus/I005D/files/dualwifi.sh:system/bin/dualwifi.sh \
+    device/asus/I005D/files/dualwifi.rc:system/etc/init/dualwifi.rc \
     device/phh/treble/phh-on-boot.sh:system/bin/phh-on-boot.sh \
     device/phh/treble/power-mode-monitor.sh:system/bin/power-mode-monitor.sh \
     device/phh/treble/phh-on-data.sh:system/bin/phh-on-data.sh \

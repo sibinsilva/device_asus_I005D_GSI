@@ -1,0 +1,6 @@
+# ROG5 Network Acceleration Hub: TrebleApp sets these, the root work runs here.
+on property:sys.phh.dualwifi.multista=*
+    exec u:r:phhsu_daemon:s0 root -- /system/bin/sh /system/bin/dualwifi.sh sys.phh.dualwifi.multista
+
+on property:sys.phh.dualwifi.split=*
+    exec u:r:phhsu_daemon:s0 root -- /system/bin/sh /system/bin/dualwifi.sh sys.phh.dualwifi.split
