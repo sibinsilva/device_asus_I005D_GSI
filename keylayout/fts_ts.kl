@@ -1,9 +1,12 @@
 # ASUS ROG Phone 5/5s touchscreen (fts_ts): Generic.kl with these changes.
 # While vendor.asus.touch_control_fod is set (screen off), the touch driver
 # reports a finger on the FOD area as KEY_F (33) instead of a touch; map it to
-# WAKEUP (stock: FINGERPRINT_EARLYWAKEUP) so SystemUI starts the UDFPS scan.
-# KEY_U (22, finger up), KEY_O (24, partial finger) and KEY_L (38, tap outside
-# the FOD area) are left unmapped so they never arrive as typed letters.
+# MACRO_1 with WAKE (stock: FINGERPRINT_EARLYWAKEUP). With persist.sys.phh.fod.asus
+# the framework turns that into a WAKE_REASON_BIOMETRIC wake and SystemUI starts
+# the UDFPS scan; other wake keys don't.
+# KEY_U (22, finger up), KEY_O (24, partial finger) and KEY_L (38, any single
+# tap outside the FOD area, verified 2026-11-06) are left unmapped so they never
+# wake the device or arrive as typed letters.
 
 # Copyright (C) 2010 The Android Open Source Project
 #
@@ -57,7 +60,7 @@ key 29    CTRL_LEFT
 key 30    A
 key 31    S
 key 32    D
-key 33    WAKEUP
+key 33    MACRO_1           WAKE
 key 34    G
 key 35    H
 key 36    J
