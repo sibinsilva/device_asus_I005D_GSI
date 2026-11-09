@@ -3,7 +3,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lunaris_I005D.mk
 
 COMMON_LUNCH_CHOICES := \
-    infinity_I005D-bp4a-userdebug \
-    infinity_I005D-bp4a-user \
-    lunaris_I005D-bp4a-userdebug \
-    lunaris_I005D-bp4a-user
+    infinity_I005D-cp2a-userdebug \
+    infinity_I005D-cp2a-user \
+    lunaris_I005D-cp2a-userdebug \
+    lunaris_I005D-cp2a-user
