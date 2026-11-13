@@ -58,3 +58,7 @@ persist.vendor.asus.micfansettings=1
 # Media, as on stock.
 media.stagefright.thumbnail.prefer_hw_codecs=true
 media.aac_51_output_enabled=true
+
+# QCA6490 runs 2.4 GHz + 5 GHz concurrently, but the stock A13 Wi-Fi HAL
+# reports no DBS radio combination; needed for dual Wi-Fi (multi-internet).
+persist.sys.phh.wifi.assume_dbs=true
