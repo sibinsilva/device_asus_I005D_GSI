@@ -123,6 +123,8 @@ PRODUCT_PACKAGES += \
     resetprop_phh \
     android.hardware.biometrics.fingerprint@2.3-service.anakin \
     AsusCamera \
+    ROGAirTrigger \
+    AsusGmotion \
     ROG5FrameworkOverlay \
     ROG5WifiOverlay \
     curl \
