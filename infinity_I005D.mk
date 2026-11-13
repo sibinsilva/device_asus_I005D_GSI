@@ -20,3 +20,5 @@ PRODUCT_CHARACTERISTICS := device
 
 # Infinity ships GApps from vendor/google/gms when WITH_GAPPS is true.
 WITH_GAPPS := true
+# Private Compute Services crash-loops without framework-virtualization.
+PRODUCT_PACKAGES += rog5-remove-pcs
