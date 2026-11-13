@@ -1,0 +1,14 @@
+# ROG5 Treble app features that need root. TrebleApp (system uid) can't write
+# these sysfs/proc nodes or the vendor netutild property, and can't use su
+# under KernelSU, so it sets sys.phh.rog.* and init applies them here.
+on property:sys.phh.rog.bypass=*
+    exec u:r:phhsu_daemon:s0 root -- /system/bin/sh /system/bin/rog-features.sh sys.phh.rog.bypass
+
+on property:sys.phh.rog.sched_boost=*
+    exec u:r:phhsu_daemon:s0 root -- /system/bin/sh /system/bin/rog-features.sh sys.phh.rog.sched_boost
+
+on property:sys.phh.rog.antenna=*
+    exec u:r:phhsu_daemon:s0 root -- /system/bin/sh /system/bin/rog-features.sh sys.phh.rog.antenna
+
+on property:sys.phh.rog.netutild=*
+    exec u:r:phhsu_daemon:s0 root -- /system/bin/sh /system/bin/rog-features.sh sys.phh.rog.netutild

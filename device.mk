@@ -89,6 +89,8 @@ PRODUCT_COPY_FILES += \
     device/asus/I005D/files/rw-system.sh:system/bin/rw-system.sh \
     device/asus/I005D/files/dualwifi.sh:system/bin/dualwifi.sh \
     device/asus/I005D/files/dualwifi.rc:system/etc/init/dualwifi.rc \
+    device/asus/I005D/files/rog-features.sh:system/bin/rog-features.sh \
+    device/asus/I005D/files/rog-features.rc:system/etc/init/rog-features.rc \
     device/phh/treble/phh-on-boot.sh:system/bin/phh-on-boot.sh \
     device/phh/treble/power-mode-monitor.sh:system/bin/power-mode-monitor.sh \
     device/phh/treble/phh-on-data.sh:system/bin/phh-on-data.sh \
